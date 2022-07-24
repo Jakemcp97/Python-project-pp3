@@ -1,7 +1,11 @@
 #Blackjack 
 
 #card class definition 
-
+class Card: 
+    def __init__(self, suit, value, card_value):
+        self.suit = suit
+        self.card_value = card_value
+        self.value = value
 #create and print card function
 
 #game function 
