@@ -116,6 +116,26 @@ def print_cards(cards, hidden):
  
     print()
 #game function 
+def blackjack(deck):
+
+    #player and dealer cards
+    player_cards = []
+    dealer_cards = []
+
+    #dealer/player scores 
+
+    #initial deal
+    #check if player gets blackjack
+    #if player get blackjack autowin
+    #check for player bust
+    #dealers moves
+    #if dealer gets blackjack
+    #if dealer busts
+
+    #if game is a tie
+    #if player wins 
+    #if dealer wins
+    
 
 
 #suits
@@ -123,3 +143,4 @@ suits = ["Spades", "Hearts", "Clubs", "Diamonds"]
 suits_values = {"Spades":"\u2664", "Hearts":"\u2661", "Clubs":"\u2667", "Diamonds":"\u2662"}
 cards = ["A", "2", "3", "4", "5", "6", "7", "8","9", "10", "J", "Q", "k"]
 card_values = {"A":11, "2":2, "3":3, "4":4, "5":5, "6":6, "7":7, "8":8,"9":9, "10":10, "J":10, "Q":10, "k":10}
+deck = []
