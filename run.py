@@ -241,6 +241,7 @@ def blackjack(deck):
     #check for player blackjack again
     if player_score == 21: 
         print("You have a Blackjack \n You Win!!!")
+        restart
         if restart == "Y" or "y":
             blackjack(deck)
         else:
@@ -248,7 +249,7 @@ def blackjack(deck):
     #check for player bust
     if player_score > 21 :
         print("You have busted! \n Dealer Wins!")
-        restart = input("Would you like to play again? Y or N? ")
+        restart
         if restart == "Y" or "y":
             blackjack(deck)
         else:
@@ -290,7 +291,7 @@ def blackjack(deck):
     #check for dealer bust 
     if dealer_score > 21:
         print("Dealer has gone bust! \n You win!")
-        restart = input("Would you like to play again? Y or N? ")
+        restart
         if restart == "Y" or "y":
             blackjack(deck)
         else:
@@ -299,7 +300,7 @@ def blackjack(deck):
     #check for dealer blackjack
     if dealer_score == 21: 
         print("The Dealer has a Blackjack! You lose this hand!")
-        restart = input("Would you like to play again? Y or N? ")
+        restart 
         if restart == "Y" or "y":
             blackjack(deck)
         else:
