@@ -310,3 +310,5 @@ deck = []
 for suit in suits: 
     for card in cards: 
         deck.append(Card(suits_values[suit], card, card_values[card]))
+
+blackjack(deck)
