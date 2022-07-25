@@ -309,12 +309,27 @@ def blackjack(deck):
     #acknowledge if its a tie game
     if dealer_score == player_score:
         print("Tie Game, No Winners!")
+        restart 
+        if restart == "Y" or "y":
+            blackjack(deck)
+        else:
+            quit()
         
     #if player wins via score
     elif player_score > dealer_score: 
         print("You win this hand!")
+        restart 
+        if restart == "Y" or "y":
+            blackjack(deck)
+        else:
+            quit()
     else: 
         print("The dealer has won this hand!")
+        restart 
+        if restart == "Y" or "y":
+            blackjack(deck)
+        else:
+            quit()
 #suits
 suits = ["Spades", "Hearts", "Clubs", "Diamonds"]
 suits_values = {"Spades":"\u2664", "Hearts":"\u2661", "Clubs":"\u2667", "Diamonds":"\u2662"}
