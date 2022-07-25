@@ -1,5 +1,6 @@
 #Blackjack 
 from http.cookiejar import DefaultCookiePolicy
+from pydoc import plain
 import random
 
 #card class definition 
@@ -175,11 +176,59 @@ def blackjack(deck):
         restart = input("Would you like to play again? Y or N? ")
         if restart == "Y":
             blackjack(deck)
+        else:
+            quit()
+    
+    #print dealer and player cards
+    print("Dealers cards: ")
+    print_cards(dealer_cards[:-1], True)
+    print("Dealers score =" , dealer_score-dealer_cards[-1].card_value)
+    print()
+    print("Your Cards: ")
+    print_cards(player_cards, False)
+    print("Your score = ", player_score)
+
+    #players moves 
+    while player_score<21:
+        choice = input("press H to hit or S to stand: ")
+
+        #validate input
+        if len(choice) != 1 or (choice.upper() != "H" and choice.upper() != "S"):
+            print("you have entered an incorrect answer, Please try again!")
+        #hit function 
+        if choice.upper() == "H":
+            #deal new card
+            player_card = random.choice(deck)
+            player_cards.append(player_card)
+            deck.remove(player_card)
+            player_score += player_card.card_value
+
+            #update player score when dealing with an ace
+            x = 0
+            while player_score >21 and x < len(player_cards):
+                if player_cards[x].card_value == 11:
+                    player_cards[x].card_value = 1
+                    player_score -= 10
+                    x +=1
+                else:
+                    x += 1
+
+    #print next round of cards
+            print("Dealers cards: ")
+            print_cards(dealer_cards[:-1], True)
+            print("Dealers score = ", dealer_score - dealer_cards[-1].card_value)
+            print()
+            print("Your cards: ")
+            print_cards(player_cards, False)
+            print("Your score = ", player_score)
+
+        #stand function player input    
+        if choice.upper() == "S":
+            break
 
 
-    #check if player gets blackjack
-    #if player get blackjack autowin
-    #check for player bust
+
+
     #dealers moves
     #if dealer gets blackjack
     #if dealer busts
