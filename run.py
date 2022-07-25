@@ -151,7 +151,30 @@ def blackjack(deck):
         dealer_cards.append(dealer_card)
         deck.remove(dealer_card)
         dealer_score += dealer_card.card_value
-        
+
+        #print dealer cards, hiding the second
+        print("Dealers cards: ")
+        if len(dealer_cards) == 1:
+            print_cards(dealer_cards, False)
+            print("dealers score = ", dealer_score)
+        else: 
+            print_cards(dealer_cards[:-1], True)
+            print("Dealers Score =", dealer_score - dealer_cards[-1].card_value)
+
+        #check for both dealers cards being aces 
+        if len(dealer_cards) == 2:
+            if dealer_cards[0].card_value == 11 and dealer_cards[1].card_value == 11:
+                dealer_cards[1].card_value = 1
+                dealer_score -= 10
+
+        input("Press return to continue: ")
+
+    #if player gets a blackjack 
+    if player_score == 21:
+        print("You have a BlackJack! \n You Win!!!")
+        restart = input("Would you like to play again? Y or N? ")
+        if restart == "Y":
+            blackjack(deck)
 
 
     #check if player gets blackjack
