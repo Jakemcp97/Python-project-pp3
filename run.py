@@ -1,4 +1,5 @@
 #Blackjack 
+from http.cookiejar import DefaultCookiePolicy
 import random
 
 #card class definition 
@@ -143,6 +144,15 @@ def blackjack(deck):
         print("Your cards: ")
         print_cards(player_cards, False)
         print("Your current score= ", player_score)
+        input("Press enter to continue")
+
+        #deal random card to dealer and update dealer score
+        dealer_card= random.choice(deck)
+        dealer_cards.append(dealer_card)
+        deck.remove(dealer_card)
+        dealer_score += dealer_card.card_value
+        
+
 
     #check if player gets blackjack
     #if player get blackjack autowin
