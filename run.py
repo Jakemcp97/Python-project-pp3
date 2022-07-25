@@ -168,13 +168,13 @@ def blackjack(deck):
                 dealer_cards[1].card_value = 1
                 dealer_score -= 10
 
-        input("Press return to continue: ")
+        input("Press enter to continue: ")
 
     #if player gets a blackjack 
     if player_score == 21:
         print("You have a BlackJack! \n You Win!!!")
         restart = input("Would you like to play again? Y or N? ")
-        if restart == "Y":
+        if restart == "Y" or "y":
             blackjack(deck)
         else:
             quit()
