@@ -225,17 +225,30 @@ def blackjack(deck):
         #stand function player input    
         if choice.upper() == "S":
             break
+    
+    #final card print
+    print(" Your cards: ")
+    print_cards(player_cards, False)
+    print("Your Score = ", player_score)
+    
+    print()
+    print("The dealer is showing his hidden card!")
 
+    print("Dealers cards: ")
+    print_cards(dealer_cards, False)
+    print("The Dealers score is = ", dealer_score)
 
+    #check for player blackjack again
+    if player_score == 21: 
+        print("You have a Blackjack \n You Win!!!")
+        quit()
+    #check for player bust
+    if player_score > 21 :
+        print("You have busted! \n Dealer Wins!")
+        quit()
+    input("Press return to continue")
 
-
-    #dealers moves
-    #if dealer gets blackjack
-    #if dealer busts
-
-    #if game is a tie
-    #if player wins 
-    #if dealer wins
+    #Dealers move management
     
 
 
