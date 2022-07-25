@@ -241,12 +241,19 @@ def blackjack(deck):
     #check for player blackjack again
     if player_score == 21: 
         print("You have a Blackjack \n You Win!!!")
-        quit()
+        if restart == "Y" or "y":
+            blackjack(deck)
+        else:
+            quit()
     #check for player bust
     if player_score > 21 :
         print("You have busted! \n Dealer Wins!")
-        quit()
-    input("Press return to continue")
+        restart = input("Would you like to play again? Y or N? ")
+        if restart == "Y" or "y":
+            blackjack(deck)
+        else:
+            quit()
+    input("Press enter to continue")
 
     #Dealers move management
     while dealer_score < 17: 
@@ -279,16 +286,24 @@ def blackjack(deck):
         print_cards(dealer_cards, False)
         print("Dealers score = ", dealer_score)
 
-        input("press return to continue: ")  
+        input("press enter to continue: ")  
     #check for dealer bust 
     if dealer_score > 21:
         print("Dealer has gone bust! \n You win!")
-        quit()
+        restart = input("Would you like to play again? Y or N? ")
+        if restart == "Y" or "y":
+            blackjack(deck)
+        else:
+            quit()
 
     #check for dealer blackjack
     if dealer_score == 21: 
         print("The Dealer has a Blackjack! You lose this hand!")
-        quit()
+        restart = input("Would you like to play again? Y or N? ")
+        if restart == "Y" or "y":
+            blackjack(deck)
+        else:
+            quit()
     
     #acknowledge if its a tie game
     if dealer_score == player_score:
