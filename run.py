@@ -1,4 +1,5 @@
 #Blackjack 
+import random
 
 #card class definition 
 class Card: 
