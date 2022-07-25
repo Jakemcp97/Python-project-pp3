@@ -173,11 +173,7 @@ def blackjack(deck):
     #if player gets a blackjack 
     if player_score == 21:
         print("You have a BlackJack! \n You Win!!!")
-        restart = input("Would you like to play again? Y or N? ")
-        if restart == "Y" or "y":
-            blackjack(deck)
-        else:
-            quit()
+        quit()
     
     #print dealer and player cards
     print("Dealers cards: ")
@@ -241,19 +237,11 @@ def blackjack(deck):
     #check for player blackjack again
     if player_score == 21: 
         print("You have a Blackjack \n You Win!!!")
-        restart
-        if restart == "Y" or "y":
-            blackjack(deck)
-        else:
-            quit()
+        quit()
     #check for player bust
     if player_score > 21 :
         print("You have busted! \n Dealer Wins!")
-        restart
-        if restart == "Y" or "y":
-            blackjack(deck)
-        else:
-            quit()
+        quit()
     input("Press enter to continue")
 
     #Dealers move management
@@ -291,45 +279,24 @@ def blackjack(deck):
     #check for dealer bust 
     if dealer_score > 21:
         print("Dealer has gone bust! \n You win!")
-        restart
-        if restart == "Y" or "y":
-            blackjack(deck)
-        else:
-            quit()
+        quit()
 
     #check for dealer blackjack
     if dealer_score == 21: 
         print("The Dealer has a Blackjack! You lose this hand!")
-        restart 
-        if restart == "Y" or "y":
-            blackjack(deck)
-        else:
-            quit()
+        quit()
     
     #acknowledge if its a tie game
     if dealer_score == player_score:
         print("Tie Game, No Winners!")
-        restart 
-        if restart == "Y" or "y":
-            blackjack(deck)
-        else:
-            quit()
+        quit()
         
     #if player wins via score
     elif player_score > dealer_score: 
         print("You win this hand!")
-        restart 
-        if restart == "Y" or "y":
-            blackjack(deck)
-        else:
-            quit()
     else: 
         print("The dealer has won this hand!")
-        restart 
-        if restart == "Y" or "y":
-            blackjack(deck)
-        else:
-            quit()
+        quit()
 #suits
 suits = ["Spades", "Hearts", "Clubs", "Diamonds"]
 suits_values = {"Spades":"\u2664", "Hearts":"\u2661", "Clubs":"\u2667", "Diamonds":"\u2662"}
