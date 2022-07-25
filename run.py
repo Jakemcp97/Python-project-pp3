@@ -269,10 +269,36 @@ def blackjack(deck):
                 y +=1
         
         #print for dealer management
-    
-    
+        print("Your cards: ")
+        print_cards(player_cards, False)
+        print("Your score = ", player_score)
 
+        print()
 
+        print("Dealer cards: ")
+        print_cards(dealer_cards, False)
+        print("Dealers score = ", dealer_score)
+
+        input("press return to continue: ")  
+    #check for dealer bust 
+    if dealer_score > 21:
+        print("Dealer has gone bust! \n You win!")
+        quit()
+
+    #check for dealer blackjack
+    if dealer_score == 21: 
+        print("The Dealer has a Blackjack! You lose this hand!")
+        quit()
+    
+    #acknowledge if its a tie game
+    if dealer_score == player_score:
+        print("Tie Game, No Winners!")
+        
+    #if player wins via score
+    elif player_score > dealer_score: 
+        print("You win this hand!")
+    else: 
+        print("The dealer has won this hand!")
 #suits
 suits = ["Spades", "Hearts", "Clubs", "Diamonds"]
 suits_values = {"Spades":"\u2664", "Hearts":"\u2661", "Clubs":"\u2667", "Diamonds":"\u2662"}
