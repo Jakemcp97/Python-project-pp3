@@ -140,6 +140,10 @@ def blackjack(deck):
                 player_cards[0].card_value = 1
                 player_score -= 10
 
+        print("Your cards: ")
+        print_cards(player_cards, False)
+        print("Your current score= ", player_score)
+
     #check if player gets blackjack
     #if player get blackjack autowin
     #check for player bust
