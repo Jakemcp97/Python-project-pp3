@@ -249,6 +249,27 @@ def blackjack(deck):
     input("Press return to continue")
 
     #Dealers move management
+    while dealer_score < 17: 
+        print("Dealer must hit: ")
+
+        dealer_card = random.choice(deck)
+        dealer_cards.append(dealer_card)
+        deck.remove(dealer_card)
+
+        dealer_score += dealer_card.card_value
+
+        #check for dealer having aces and reflecting in score
+        y = 0
+        while dealer_score > 21 and y < len(dealer_cards):
+            if dealer_cards[y].card_value == 11:
+                dealer_cards[y].card_value = 1
+                dealer_score -= 10
+                y += 1
+            else: 
+                y +=1
+        
+        #print for dealer management
+    
     
 
 
