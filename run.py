@@ -124,8 +124,22 @@ def blackjack(deck):
     dealer_cards = []
 
     #dealer/player scores 
-
+    player_score = 0
+    dealer_score = 0
     #initial deal
+    while len(player_cards) <2:
+        #deal a random card
+        player_card = random.choice(deck)
+        player_cards.append(player_card)
+        deck.remove(player_card)
+
+        player_score += player_card.card_value
+        #if both cards are ace make first ace value 1
+        if len(player_cards) ==2:
+            if player_cards[0].card_value == 11 and player_cards[1].card_value == 11:
+                player_cards[0].card_value = 1
+                player_score -= 10
+
     #check if player gets blackjack
     #if player get blackjack autowin
     #check for player bust
