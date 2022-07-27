@@ -1,11 +1,12 @@
 # Blackjack
-from http.cookiejar import DefaultCookiePolicy
-from pydoc import plain
 import random
 
 
-# card class definition
+
 class Card:
+    """
+    Card class definition
+    """
     def __init__(self, suit, value, card_value):
         self.suit = suit
         self.card_value = card_value
@@ -124,7 +125,10 @@ def print_cards(cards, hidden):
 
 # game function
 def blackjack(deck):
-
+    """
+    A simple blackjack game where the goal is to get a total of, 
+    or as close to 21 in card value while competing against the dealer. 
+    """
     # player and dealer cards
     player_cards = []
     dealer_cards = []
@@ -303,9 +307,8 @@ def blackjack(deck):
         print("The dealer has won this hand!")
         restart()
 
-
+# A function allowing user to restart on game end
 def restart():
-    #A function allowing user to restart on game end
     while True:
         end_game = input("Would you like to restart? Y or N?")
         if len(end_game) != 1 or (end_game.upper() != "Y" and end_game.upper() != "N"):
