@@ -175,7 +175,7 @@ def blackjack(deck):
     #if player gets a blackjack 
     if player_score == 21:
         print("You have a BlackJack! \n You Win!!!")
-        quit()
+        restart()
     
     #print dealer and player cards
     print("Dealers cards: ")
@@ -239,11 +239,11 @@ def blackjack(deck):
     #check for player blackjack again
     if player_score == 21: 
         print("You have a Blackjack \n You Win!!!")
-        quit()
+        restart()
     #check for player bust
     if player_score > 21 :
         print("You have busted! \n Dealer Wins!")
-        quit()
+        restart()
     input("Press enter to continue \n")
 
     #Dealers move management
@@ -281,31 +281,37 @@ def blackjack(deck):
     #check for dealer bust 
     if dealer_score > 21:
         print("Dealer has gone bust! \n You win!")
-        quit()
+        restart()
 
     #check for dealer blackjack
     if dealer_score == 21: 
         print("The Dealer has a Blackjack! You lose this hand!")
-        quit()
+        restart()
     
     #acknowledge if its a tie game
     if dealer_score == player_score:
         print("Tie Game, No Winners!")
-        quit()
+        restart()
         
     #if player wins via score
     elif player_score > dealer_score: 
         print("You win this hand!")
+        restart()
     else: 
         print("The dealer has won this hand!")
-        quit()
+        restart()
 
-def restart(end_game):
-    if end_game == "Y" or "y":
-        blackjack(deck)
-    else:
-        print("Thanks for playing!! ")
-        quit()
+def restart():
+    while True:
+        end_game = input("Would you like to restart? Y or N?")
+        if len(end_game) != 1 or (end_game.upper() != "Y" and end_game.upper() != "N"):
+            print("you have entered an incorrect answer, Please try again!")
+        if end_game.upper() == "Y":
+            blackjack(deck)
+        elif end_game.upper() == "N" or "n":
+            print("Thanks for playing!! ")
+            False
+            quit()
 
 
 #suits
@@ -321,5 +327,3 @@ for suit in suits:
         deck.append(Card(suits_values[suit], card, card_values[card]))
 
 blackjack(deck)
-end_game = input("Would you like to restart? Y or N?")
-restart(end_game)
