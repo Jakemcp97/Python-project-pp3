@@ -299,6 +299,15 @@ def blackjack(deck):
     else: 
         print("The dealer has won this hand!")
         quit()
+
+def restart(end_game):
+    if end_game == "Y" or "y":
+        blackjack(deck)
+    else:
+        print("Thanks for playing!! ")
+        quit()
+
+
 #suits
 suits = ["Spades", "Hearts", "Clubs", "Diamonds"]
 suits_values = {"Spades":"\u2664", "Hearts":"\u2661", "Clubs":"\u2667", "Diamonds":"\u2662"}
@@ -312,3 +321,5 @@ for suit in suits:
         deck.append(Card(suits_values[suit], card, card_values[card]))
 
 blackjack(deck)
+end_game = input("Would you like to restart? Y or N?")
+restart(end_game)
