@@ -126,7 +126,7 @@ def print_cards(cards, hidden):
 # game function
 def blackjack(deck):
     """
-    A simple blackjack game where the goal is to get a total of, 
+    A simple blackjack game where the goal is to get a total of,
     or as close to 21 in card value while competing against the dealer. 
     """
     # player and dealer cards
