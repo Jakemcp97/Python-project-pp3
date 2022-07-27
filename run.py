@@ -3,12 +3,20 @@ from http.cookiejar import DefaultCookiePolicy
 from pydoc import plain
 import random
 
+
 #card class definition 
 class Card: 
     def __init__(self, suit, value, card_value):
         self.suit = suit
         self.card_value = card_value
         self.value = value
+
+def print_all(self):
+    print("Your cards: ")
+        self.print_cards(self.player_cards, False)
+        print("Your current score= ", self.player_score)
+        input("Press enter to continue \n")
+
 #create and print card function - sourced from askpython.com
 def print_cards(cards, hidden):
          
