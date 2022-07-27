@@ -145,7 +145,7 @@ def blackjack(deck):
         print("Your cards: ")
         print_cards(player_cards, False)
         print("Your current score= ", player_score)
-        input("Press enter to continue")
+        input("Press enter to continue \n")
 
         #deal random card to dealer and update dealer score
         dealer_card= random.choice(deck)
@@ -168,7 +168,7 @@ def blackjack(deck):
                 dealer_cards[1].card_value = 1
                 dealer_score -= 10
 
-        input("Press enter to continue: ")
+        input("Press enter to continue: \n")
 
     #if player gets a blackjack 
     if player_score == 21:
@@ -186,7 +186,7 @@ def blackjack(deck):
 
     #players moves 
     while player_score<21:
-        choice = input("press H to hit or S to stand: ")
+        choice = input("press H to hit or S to stand: \n")
 
         #validate input
         if len(choice) != 1 or (choice.upper() != "H" and choice.upper() != "S"):
@@ -242,7 +242,7 @@ def blackjack(deck):
     if player_score > 21 :
         print("You have busted! \n Dealer Wins!")
         quit()
-    input("Press enter to continue")
+    input("Press enter to continue \n")
 
     #Dealers move management
     while dealer_score < 17: 
@@ -275,7 +275,7 @@ def blackjack(deck):
         print_cards(dealer_cards, False)
         print("Dealers score = ", dealer_score)
 
-        input("press enter to continue: ")  
+        input("press enter to continue: \n")  
     #check for dealer bust 
     if dealer_score > 21:
         print("Dealer has gone bust! \n You win!")
