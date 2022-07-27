@@ -11,12 +11,6 @@ class Card:
         self.card_value = card_value
         self.value = value
 
-def print_all(self):
-    print("Your cards: ")
-        self.print_cards(self.player_cards, False)
-        print("Your current score= ", self.player_score)
-        input("Press enter to continue \n")
-
 #create and print card function - sourced from askpython.com
 def print_cards(cards, hidden):
          
@@ -149,7 +143,7 @@ def blackjack(deck):
             if player_cards[0].card_value == 11 and player_cards[1].card_value == 11:
                 player_cards[0].card_value = 1
                 player_score -= 10
-
+    	
         print("Your cards: ")
         print_cards(player_cards, False)
         print("Your current score= ", player_score)
