@@ -1,7 +1,8 @@
-# PROJECT NAME
-*replace the **PROJECT NAME** header with your project's name*
-- Screenshot of logo/navigation of mobile deployed site
-- Include a link to deployed project with one line explanation of project
+# Blackjack!
+- This is a simple Blackjack game i have built, running on the code institute mock terminal via heroku. 
+- The goal of the game is to get a total card value of 21, while competeing against the dealer. The first to get 21, or as close to it as possible will win. However, if either party gets a total over 21, they will bust immediately losing! 
+![deployed-image](deployed.png)
+- The app can be viewed at https://blackjack-jmp.herokuapp.com
 
 ## Author
 DEVELOPER_NAME
