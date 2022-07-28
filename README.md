@@ -1,24 +1,20 @@
 # Blackjack!
-- This is a simple Blackjack game i have built, running on the code institute mock terminal via heroku. 
-- The goal of the game is to get a total card value of 21, while competeing against the dealer. The first to get 21, or as close to it as possible will win. However, if either party gets a total over 21, they will bust immediately losing! 
+This is a simple Blackjack game i have built, running on the code institute mock terminal via heroku. 
+The goal of the game is to get a total card value of 21, while competeing against the dealer. The first to get 21, or as close to it as possible will win. However, if either party gets a total over 21, they will bust immediately losing! 
 ![deployed-image](deployed.png)
-- The app can be viewed at https://blackjack-jmp.herokuapp.com
+The app can be viewed at https://blackjack-jmp.herokuapp.com
 
 ## Author
-DEVELOPER_NAME
-
-## Project Overview
-- Include a recording of site that shows the terminal interaction.
-  https://chrome.google.com/webstore/detail/loom-for-chrome/liecbddmkiiihnedobmlmillhodjkdmb is a very intuitive and free tool to do a web recording.
-- Then you can use https://cloudconvert.com/mp4-to-gif to convert the mp4 to a gif and just paste it into the readme via git hub and it'll resovle itself.
-- One or two sentences providing an overview of your project.
-- Include a link to your deployed website
+Jake McParland
 
 ## Table of Contents
 Generate after readme is complete for UX and below
 
 ## How To Play/Use
-Paragraph or bullet points of how the user initiates the program and interfaces with it. You could have videos of each bit if you want and ditact what the user should do.
+- When started, the user will need to cycle through the dealer handing out cards by pressing enter, 2 for the player and 2 for the dealer. 
+- After the dealing, the user will need to decide to either hit using the "H" key or stand using the "S" key when prompted. The user will need to choose what to do based on their current total card value. 
+-Choosing hit will draw another card for the player, while choosing stand will end the players turn and allow the dealer to reveal his hidden card and decide the winner. 
+-
 
 ## Features
 Use this section to itemize the features of your project. 
