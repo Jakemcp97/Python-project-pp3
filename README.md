@@ -8,7 +8,22 @@ The app can be viewed at https://blackjack-jmp.herokuapp.com
 Jake McParland
 
 ## Table of Contents
-Generate after readme is complete for UX and below
+- [Blackjack!](#blackjack-)
+  * [Author](#author)
+  * [Table of Contents](#table-of-contents)
+  * [How To Play/Use](#how-to-play-use)
+  * [Features](#features)
+    + [Implemented Features](#implemented-features)
+    + [Future Features](#future-features)
+  * [Data Model](#data-model)
+  * [Testing](#testing)
+  * [Bugs](#bugs)
+    + [solved bugs](#solved-bugs)
+    + [remaining bugs](#remaining-bugs)
+    + [validation testing](#validation-testing)
+  * [Deployment](#deployment)
+    + [Heroku](#heroku)
+  * [Credits](#credits)
 
 ## How To Play/Use
 - When started, the user will need to cycle through the dealer handing out cards by pressing enter, 2 for the player and 2 for the dealer. 
@@ -79,3 +94,4 @@ Once a card has been selected from the deck, it is simultaneously removed from t
     - The example game i coded along with. 
 -Stackoverflow for various bug fixes and ideas. 
 
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
