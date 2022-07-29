@@ -144,7 +144,7 @@ def blackjack(deck):
 
         player_score += player_card.card_value
         # if both cards are ace make first ace value 1
-        
+
         if len(player_cards) == 2:
             val1 = player_cards[0].card_value
             val2 = player_cards[1].card_value
@@ -174,8 +174,7 @@ def blackjack(deck):
             print("Dealers Score =", dealer_score - dprint)
 
         # check for both dealers cards being aces
-       
-        if len(dealer_cards) == 2: 
+        if len(dealer_cards) == 2:
             dcard1 = dealer_cards[0].card_value
             dcard2 = dealer_cards[1].card_value
             if dcard1 == 11 and dcard2 == 11:
@@ -200,13 +199,13 @@ def blackjack(deck):
 
     # players moves
     while player_score < 21:
-        choice = input("press H to hit or S to stand: \n")
+        pick = input("press H to hit or S to stand: \n")
 
         # validate input
-        if len(choice) != 1 or (choice.upper() != "H" and choice.upper() != "S"):
+        if len(pick) != 1 or (pick.upper() != "H" and pick.upper() != "S"):
             print("you have entered an incorrect answer, Please try again!")
         # hit function
-        if choice.upper() == "H":
+        if pick.upper() == "H":
             # deal new card
             player_card = random.choice(deck)
             player_cards.append(player_card)
@@ -233,7 +232,7 @@ def blackjack(deck):
             print("Your score = ", player_score)
 
         # stand function player input
-        if choice.upper() == "S":
+        if pick.upper() == "S":
             break
 
     # final card print
@@ -313,13 +312,14 @@ def blackjack(deck):
         print("The dealer has won this hand!")
         restart()
 
+
 # A function allowing user to restart on game end
 def restart():
     while True:
         end_game = input("Would you like to restart? Y or N?")
         if len(end_game) != 1 or (
             end_game.upper() != "Y" and end_game.upper() != "N"
-            ):
+             ):
             print("you have entered an incorrect answer, Please try again!")
         if end_game.upper() == "Y":
             blackjack(deck)
