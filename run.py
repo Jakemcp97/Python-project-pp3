@@ -2,7 +2,6 @@
 import random
 
 
-
 class Card:
     """
     Card class definition

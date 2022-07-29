@@ -20,7 +20,6 @@ The Player can enter "Y" to reset the hand or "N" to quit the game.
 ## Features
 
 ### Implemented Features
-- Random card deck generator :
 - Score tracking : 
 - User input for decision making : 
 - A restart function : 

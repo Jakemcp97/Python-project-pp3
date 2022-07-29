@@ -26,5 +26,10 @@
    "[python]": {
       "editor.defaultFormatter": "ms-python.python"
    },
-   "python.formatting.provider": "black"
+   "python.formatting.provider": "black",
+   "python.testing.pytestArgs": [
+      "views"
+   ],
+   "python.testing.unittestEnabled": false,
+   "python.testing.pytestEnabled": true
 }
