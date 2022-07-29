@@ -145,8 +145,10 @@ def blackjack(deck):
 
         player_score += player_card.card_value
         # if both cards are ace make first ace value 1
+        val1 = player_cards[0].card_value
+        val2 = player_cards[1].card_value 
         if len(player_cards) == 2:
-            if player_cards[0].card_value == 11 and player_cards[1].card_value == 11:
+            if val1 == 11 and val2 == 11:
                 player_cards[0].card_value = 1
                 player_score -= 10
 
@@ -163,16 +165,19 @@ def blackjack(deck):
 
         # print dealer cards, hiding the second
         print("Dealers cards: ")
+        dprint = dealer_cards[-1].card_value
         if len(dealer_cards) == 1:
             print_cards(dealer_cards, False)
             print("dealers score = ", dealer_score)
         else:
             print_cards(dealer_cards[:-1], True)
-            print("Dealers Score =", dealer_score - dealer_cards[-1].card_value)
+            print("Dealers Score =", dealer_score - dprint)
 
         # check for both dealers cards being aces
+        dcard1 = dealer_cards[0].card_value
+        dcard2 = dealer_cards[1].card_value
         if len(dealer_cards) == 2:
-            if dealer_cards[0].card_value == 11 and dealer_cards[1].card_value == 11:
+            if dcard1 == 11 and dcard2 == 11:
                 dealer_cards[1].card_value = 1
                 dealer_score -= 10
 
@@ -186,7 +191,7 @@ def blackjack(deck):
     # print dealer and player cards
     print("Dealers cards: ")
     print_cards(dealer_cards[:-1], True)
-    print("Dealers score =", dealer_score - dealer_cards[-1].card_value)
+    print("Dealers score =", dealer_score - dprint)
     print()
     print("Your Cards: ")
     print_cards(player_cards, False)
@@ -220,7 +225,7 @@ def blackjack(deck):
             # print next round of cards
             print("Dealers cards: ")
             print_cards(dealer_cards[:-1], True)
-            print("Dealers score = ", dealer_score - dealer_cards[-1].card_value)
+            print("Dealers score = ", dealer_score - dprint)
             print()
             print("Your cards: ")
             print_cards(player_cards, False)
@@ -311,11 +316,13 @@ def blackjack(deck):
 def restart():
     while True:
         end_game = input("Would you like to restart? Y or N?")
-        if len(end_game) != 1 or (end_game.upper() != "Y" and end_game.upper() != "N"):
+        if len(end_game) != 1 or (
+            end_game.upper() != "Y" and end_game.upper() != "N"
+            ):
             print("you have entered an incorrect answer, Please try again!")
         if end_game.upper() == "Y":
             blackjack(deck)
-        elif end_game.upper() == "N" or "n":
+        if end_game.upper() == "N" or "n":
             print("Thanks for playing!! ")
             quit()
 
