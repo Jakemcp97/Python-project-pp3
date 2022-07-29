@@ -315,17 +315,16 @@ def blackjack(deck):
 
 # A function allowing user to restart on game end
 def restart():
-    while True:
-        end_game = input("Would you like to restart? Y or N?")
-        if len(end_game) != 1 or (
-            end_game.upper() != "Y" and end_game.upper() != "N"
+    end_game = input("Would you like to restart? Y or N?")
+    if len(end_game) != 1 or (
+        end_game.upper() != "Y" and end_game.upper() != "N"
              ):
-            print("you have entered an incorrect answer, Please try again!")
-        if end_game.upper() == "Y":
-            blackjack(deck)
-        if end_game.upper() == "N" or "n":
-            print("Thanks for playing!! ")
-            quit()
+            return print("you have entered an incorrect answer, Please try again!")
+    elif end_game.upper() == "Y":
+        blackjack(deck)
+    elif end_game.upper() == "N" or "n":
+        print("Thanks for playing!! ")
+        quit()
 
 
 # suits
