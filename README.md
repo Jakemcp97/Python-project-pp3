@@ -1,7 +1,7 @@
 # Blackjack!
 This is a simple Blackjack game i have built, running on the code institute mock terminal via heroku. 
 The goal of the game is to get a total card value of 21, while competeing against the dealer. The first to get 21, or as close to it as possible will win. However, if either party gets a total over 21, they will bust immediately losing! 
-![deployed-image](deployed.png)
+![deployed-image](images/deployed.png)
 The app can be viewed at https://blackjack-jmp.herokuapp.com
 
 ## Author
@@ -20,9 +20,12 @@ The Player can enter "Y" to reset the hand or "N" to quit the game.
 ## Features
 
 ### Implemented Features
-- Score tracking : 
-- User input for decision making : 
-- A restart function : 
+- Score tracking : As you play the program stores and manages the players score and the dealers score allowing a winner to be chosen. 
+-[score-tracking](images/card%20score.png)
+- User input for decision making : The gane requires the user to interact rather simply to progress through the game. 
+-[user-interact](images/user-input-example.png)
+- A restart function : A function was added to allow multiple hands to be played in a row rather than just one. 
+-[restart](images/restart.png)
 
 ### Future Features
 - Additional players to compete with 
@@ -66,6 +69,7 @@ Once a card has been selected from the deck, it is simultaneously removed from t
 ## Credits
 -[Code Institute Template](https://github.com/Code-Institute-Org/python-essentials-template)
     - The Template for the GUI for this project was provided by Code Institute. This allows for the Command line to be shown and used within the browser.
+
 -[Askpython blackjack game example](https://www.askpython.com/python/examples/blackjack-game-using-python)
     - The example game i coded along with. 
 -Stackoverflow for various bug fixes and ideas. 
