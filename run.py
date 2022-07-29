@@ -127,8 +127,8 @@ def print_cards(cards, hidden):
 def blackjack(deck):
     """
     A simple blackjack game where the goal is to get a total of,
-    or as close to 21 in card value while competing against the dealer. 
-    """
+    or as close to 21 in card value while competing against the dealer.
+        """
     # player and dealer cards
     player_cards = []
     dealer_cards = []
@@ -146,7 +146,7 @@ def blackjack(deck):
         player_score += player_card.card_value
         # if both cards are ace make first ace value 1
         val1 = player_cards[0].card_value
-        val2 = player_cards[1].card_value 
+        val2 = player_cards[1].card_value
         if len(player_cards) == 2:
             if val1 == 11 and val2 == 11:
                 player_cards[0].card_value = 1
