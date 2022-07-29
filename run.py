@@ -175,9 +175,10 @@ def blackjack(deck):
             print("Dealers Score =", dealer_score - dprint)
 
         # check for both dealers cards being aces
-        dcard1 = dealer_cards[0].card_value
-        dcard2 = dealer_cards[1].card_value
-        if len(dealer_cards) == 2:
+       
+        if len(dealer_cards) == 2: 
+            dcard1 = dealer_cards[0].card_value
+            dcard2 = dealer_cards[1].card_value
             if dcard1 == 11 and dcard2 == 11:
                 dealer_cards[1].card_value = 1
                 dealer_score -= 10
