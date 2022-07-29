@@ -21,6 +21,7 @@ The Player can enter "Y" to reset the hand or "N" to quit the game.
 
 ### Implemented Features
 - Score tracking : As you play the program stores and manages the players score and the dealers score allowing a winner to be chosen.
+
 ![score-tracking](images/card%20score.png)
 - User input for decision making : The gane requires the user to interact rather simply to progress through the game. 
 ![user-interact](images/user-input-example.png)
