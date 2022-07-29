@@ -145,9 +145,10 @@ def blackjack(deck):
 
         player_score += player_card.card_value
         # if both cards are ace make first ace value 1
-        val1 = player_cards[0].card_value
-        val2 = player_cards[1].card_value
+        
         if len(player_cards) == 2:
+            val1 = player_cards[0].card_value
+            val2 = player_cards[1].card_value
             if val1 == 11 and val2 == 11:
                 player_cards[0].card_value = 1
                 player_score -= 10
