@@ -67,3 +67,7 @@ Once a card has been selected from the deck, it is simultaneously removed from t
 ## Credits
 -[Code Institute Template](https://github.com/Code-Institute-Org/python-essentials-template)
     - The Template for the GUI for this project was provided by Code Institute. This allows for the Command line to be shown and used within the browser.
+-[Askpython blackjack game example](https://www.askpython.com/python/examples/blackjack-game-using-python)
+    - The example game i coded along with. 
+-Stackoverflow for various bug fixes and ideas. 
+
