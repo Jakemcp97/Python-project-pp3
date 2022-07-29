@@ -14,58 +14,29 @@ Generate after readme is complete for UX and below
 - When started, the user will need to cycle through the dealer handing out cards by pressing enter, 2 for the player and 2 for the dealer. 
 - After the dealing, the user will need to decide to either hit using the "H" key or stand using the "S" key when prompted. The user will need to choose what to do based on their current total card value. 
 -Choosing hit will draw another card for the player, while choosing stand will end the players turn and allow the dealer to reveal his hidden card and decide the winner. 
--
+- Once the game reaches its conclusion after validating a blackjack, or a winning score, the option to restart will be offered to the player. 
+The Player can enter "Y" to reset the hand or "N" to quit the game. 
 
 ## Features
-Use this section to itemize the features of your project. 
-
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-It's easiest to break this section down into piece parts or core functionality blocks such as data upload, user input, analysis and data output; focusing on the atomic functions and data model(s) or classes you created to make the program work. 
-
 
 ### Implemented Features
-In each subsection, write out what the feature is for and what value it adds. If there is terminal interaction or output associated with the function, include a screenshot.
-
+- Random card deck generator :
+- Score tracking : 
+- User input for decision making : 
+- A restart function : 
 
 ### Future Features
+- Additional players to compete with 
+- Multiple decks
+- Online Multiplayer 
+- Bet function 
 
-Use this section to discuss plans for additional features to be implemented in the future:
+## Data Model
+For the data model in this project we generate a deck of cards in the Card class, and then assign both a number and unicode value. 
 
-If you end up not developing some features you hoped to implement, you can include those in this section.
+This data is passed through to the Blackjack function and a card is randomly drawn at specific intervals from this deck. 
 
-
-## Design Documents
-
-This section is where you would share logic diagrams and spreadsheets that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in a separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser. 
-
-The flowchart can be as simple as a picture of a drawing of how you envisioned laying out the logic for you project, or done with a professional tool such as powerpoint, googlesheets, or [https://app.diagrams.net/](https://app.diagrams.net/) They are a roadmap and do not have to be 100% accurate of the final product.
-
-## Data Model/ Classes
-In this section write our your data model(s) or classes. 
-
-You might want to include subsections that include how the data in the model is initialized and then the methods that you created to update it through the program.
-
-
-You can create a table and take a screenshot, or you can write up subsections in markdown:
-
-![image](https://user-images.githubusercontent.com/23039742/130148204-b56406bf-0fff-48f3-9dee-2f3cdbe67cc5.png)
-
-### Class X
-To better group the game as an object, I wrote a class representing its properties and had method functions to update those properties: 
-
-**Properties**
-- property 1: is a {string} it represents {something} 
-- property 2: is a {string} it represents {something} 
-
-**Methods**
-- **\_\_init\_\_**: Initialize method, it starts the class off with default parameters as if a user just started to play a game.
-- **\_\_str\_\_**: Returns a string representation of the class/object
-
-## Libraries used
-List out the python libraries you purposefully used in your project and why. You can look at your requirements.txt file and go back to https://pypi.org/ to rediscover the purpose of a library if needed.
-
-A bulleted list is a good presentation for this information.
+Once a card has been selected from the deck, it is simultaneously removed from the deck as it would be in a game of blackjack. 
 
 ## Testing
 
