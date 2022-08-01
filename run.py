@@ -320,13 +320,15 @@ def restart():
     """
     A loop to restart the game once the hand is finished
     """
-    while input("Would you like to restart? Y or N?").upper != "Y" or "N":
-        if input == "Y":
+    reset = ""
+    while reset != "Y":
+        reset = input("Would you like to restart? Y or N?").upper()
+        if reset == "Y":
             blackjack(deck)
-        if input == "N":
+        elif reset == "N":
             print("Thanks for playing!! ")
             quit()
-        else: 
+        else:
             print("you have entered an incorrect answer, Please try again!")
 
 
