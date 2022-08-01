@@ -14,7 +14,9 @@ class Card:
 
 # create and print card function - sourced from askpython.com
 def print_cards(cards, hidden):
-
+    """
+    This function generates the image of the cards in the game
+    """
     s = ""
     for card in cards:
         s = s + "\t ________________"
@@ -315,18 +317,17 @@ def blackjack(deck):
 
 # A function allowing user to restart on game end
 def restart():
-    end_game = input("Would you like to restart? Y or N?")
-    while True:
-        if len(end_game) != 1 or (
-        end_game.upper() != "Y" and end_game.upper() != "N"
-        ):
-            print("you have entered an incorrect answer, Please try again!")
-            return True
-        if end_game.upper() == "Y":
+    """
+    A loop to restart the game once the hand is finished
+    """
+    while input("Would you like to restart? Y or N?").upper != "Y" or "N":
+        if input == "Y":
             blackjack(deck)
-        if end_game.upper() == "N":
+        if input == "N":
             print("Thanks for playing!! ")
             quit()
+        else: 
+            print("you have entered an incorrect answer, Please try again!")
 
 
 # suits
