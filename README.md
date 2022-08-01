@@ -64,7 +64,12 @@ Once a card has been selected from the deck, it is simultaneously removed from t
 
 - Tested in my local terminal and on the heroku deployment with no issues
 - Tested on pep8online.com for pep8 compliance, with any errors found being fixed.
-- Giving user input prompts unlisted answers to test input validation worked perfectly. 
+- Giving input prompts non-applicable answers to test input validation worked perfectly. 
+### User testing
+- Player was capable of scoring a blackjack with their 2 cards, winning the game.
+- Player's hand was over 21 causing them to bust. 
+- Players score was lower than dealers causing them to lose round. 
+- Players score was higher than dealers winning them the hand. 
 
 ## Bugs
 ### solved bugs
