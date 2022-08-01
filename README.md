@@ -35,11 +35,11 @@ The Player can enter "Y" to reset the hand or "N" to quit the game.
 ## Features
 
 ### Implemented Features
-- Score tracking : As you play the program stores and manages the players score and the dealers score allowing a winner to be chosen.
+- Score tracking : As you play the program stores and manages the players score and the dealers score allowing a winner to be chosen. The scores are calculated based on the randomly drawn cards values. 
 
 ![score-tracking](images/card%20score.png)
 
-- User input for decision making : The gane requires the user to interact rather simply to progress through the game. 
+- User input for decision making : The gane requires the user to interact rather simply to progress through the game. This includes choosing to hit or stand as actual game functions, pressing enter to continue is implemented as a break to allow the user to take in cards and scores, and the restart function requires that a user input Y or N based on whether they would like to play another hand or not.
 
 ![user-interact](images/user-input-example.png)
 
@@ -76,9 +76,9 @@ Once a card has been selected from the deck, it is simultaneously removed from t
 - Cards not generating correctly
 - score being handled incorrectly 
 - Restart function had several versions based on mostly lack of experience. 
+- Restart function validation was working incorrectly and causing an infinite loop when no input was entered. This was solved by declaring an empty variable outside the while loop, then redeclaring the variable inside the while loop as an input. 
 ### remaining bugs 
 - If too many small value cards are printed they will start to crossover each other on small screens, Will be fixed by implementing GUI. 
-- When restart function is handed non-determined input, it will validate as wrong and then continue to take the "N" argument as the selection. 
 
 ### validation testing 
 - PEP8 = http://pep8online.com
